@@ -4,9 +4,11 @@ import dash_bootstrap_components as dbc
 import geopandas as gpd
 import folium
 
-departamentos = gpd.read_file(r"D:\backup\Documents\U Distrital\INGENIERIA CIVIL\2023-3\PROGRAMACION 2\Actividad Sep 20\data\Departamentos.zip")
-departamentos_ordenados = sorted(departamentos['DeNombre'].unique())
+departamentos = gpd.read_file('data/Departamentos.zip') 
+departamentos_ordenados = sorted([depto for depto in departamentos['DeNombre'].unique() if depto != "Area en Litigio Cauca - Huila" 
+                                  and depto != 'San Andrés Providencia y Santa Catalina'])
 opciones_dropdown = [{'label': depto, 'value': depto} for depto in departamentos_ordenados]
+
 
 area2 = dbc.Container([
     dbc.Card([
