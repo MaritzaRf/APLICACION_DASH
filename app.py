@@ -43,9 +43,9 @@ def render_tab_content(active_tab, data):
                 html.Img(
                     src='https://caracoltv.brightspotcdn.com/dims4/default/ce72944/2147483647/strip/true/crop/720x542+0+0/resize/720x542!/format/webp/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2F35%2Fbc%2F5ce64d5a42a5b784987750874597%2Fwhatsapp-image-2022-09-05-at-7.06.02%20AM%20%281%29.jpeg',
                     style={'width': '60%'},  # Tamaño de la imagen
-                    className='mx-auto d-block'),
+                    className='mx-auto d-block'), # Estilo para mostrar en línea
                 html.Br()
-            ]),  # Estilo para mostrar en línea
+            ]),  
 
             html.Div([
                 html.H4("Colegios públicos en estado critico tras inundaciones por fuertes lluvias",
@@ -60,9 +60,9 @@ def render_tab_content(active_tab, data):
                 html.Img(
                     src='https://www.eluniversal.com.co/binrepository/1000x563/0c0/0d0/none/13704/FYVN/colegio-clemente-manuel-zabala-flor-del-campo_8318919_20230822124017.jpg',
                     style={'width': '60%'},  # Tamaño de la imagen
-                    className='mx-auto d-block'),
+                    className='mx-auto d-block'), # Estilo para mostrar en línea
                 html.Br()
-            ])  # Estilo para mostrar en línea
+            ])  
         ])
 
     elif active_tab == "empresa":
