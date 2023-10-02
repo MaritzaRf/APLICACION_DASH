@@ -16,13 +16,12 @@ from frontend.area3 import *
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 @app.callback(
-    Output('map-iframe', 'srcDoc'),
-    Input('dropdown-departamentos', 'value')
+    Output("mapa", "figure"),
+    Input("departamento_consultado", "value")
 )
 
-def update_map(departamento_seleccionado):
-    return mapa_departamento(departamento_seleccionado)
-
+def update_map(departamento_consultado):
+    return consultarDepartamento(departamento_consultado)
 
 @app.callback(
     Output("tab-content", "children"),
@@ -92,13 +91,16 @@ def render_tab_content(active_tab, data):
 
 # Define el layout de la aplicación
 
-app.layout = dbc.Container([
+app.layout = dbc.Container(
+    [
     dbc.Row([
         dbc.Col(area1, md = 12, style = {'background-color':'white'}), # md es el ancho de la casilla 
         dbc.Col(area2, md = 6, style = {'background-color':'white'}),
         dbc.Col(area3, md = 6, style = {'background-color':'white'})
     ])  
-])
+    ],
+    fluid=True
+)
 
 
 
