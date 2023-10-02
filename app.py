@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import folium
 
-from backend.mapaDepartamentos import *
+from backend.calculoInundacion import consultarDepartamento
 from frontend.area1 import *
 from frontend.area2 import *
 from frontend.area3 import *
