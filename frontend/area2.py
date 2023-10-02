@@ -22,12 +22,8 @@ area2 = dbc.Container([
             ]),
     dbc.Row([
         dbc.Col([
-            dcc.Dropdown(
-                id='dropdown-departamentos',
-                options=opciones_dropdown,
-                value=None,
-                placeholder="Selecciona un departamento"
-            )
+            dcc.Dropdown(options=opciones_dropdown, value='Cundinamarca', id='departamento_consultado'),
+            dcc.Graph(id="mapa",style={'width': '100%', "height": "600px"})
         ])
     ]),
     dbc.Row([
