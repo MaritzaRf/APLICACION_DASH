@@ -16,7 +16,7 @@ area2 = dbc.Container([
         html.H5("Registro de afectaciones"),
         html.Hr(),
         dbc.Button('BUSCAR',  className="ms-12",color="none",
-                  style={"background": "linear-gradient(to right, #86BCFF, #F0FFFF)", 'text-align': 'center', 'width': '40%', 'outline':True}),
+                  style={"background": "#bcf1f5", 'text-align': 'center', 'width': '40%', 'outline':True}),
 
                 ])
             ]),
