@@ -11,28 +11,27 @@ opciones_dropdown = [{'label': depto, 'value': depto} for depto in departamentos
 
 
 area2 = dbc.Container([
-    dbc.Card([
-    dbc.CardBody([
-        html.H5("Registro de afectaciones"),
-        html.Hr(),
-        dbc.Button('BUSCAR',  className="ms-12",color="none",
-                  style={"background": "#bcf1f5", 'text-align': 'center', 'width': '40%', 'outline':True}),
-
-                ])
+        dbc.Card([
+            dbc.CardBody([
+                html.H5("Registro de afectaciones"),
+                dcc.Dropdown(
+                    options=opciones_dropdown,
+                    value='Cundinamarca',
+                    id='departamento_consultado'
+                ),
             ]),
-    dbc.Row([
-        dbc.Col([
-            dcc.Dropdown(options=opciones_dropdown, value='Cundinamarca', id='departamento_consultado'),
-            dcc.Graph(id="mapa",style={'width': '100%', "height": "600px"})
+        ]),
+        dbc.Row([
+            dbc.Col([
+                dcc.Graph(
+                    id="mapa",
+                    style={
+                        'width': '100%', 
+                        "height": "600px"
+                    },
+                )
+            ], width=12),
         ])
-    ]),
-    dbc.Row([
-        dbc.Col([
-            html.Iframe(id='map-iframe', srcDoc='', width='100%', height='600')
-        ])
-    ])
-],
-    # Agrega la clase para alinear a la izquierda
-    className="justify-content-start"
+    ],
+    className="justify-content-start",
 )
-
