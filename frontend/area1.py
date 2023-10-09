@@ -2,21 +2,14 @@ import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
-area1 = dbc.Card(
-    [
-        dbc.CardHeader(
-            html.Strong("COLEGIOS Y CRECIDAS", style={"font-size": "26px", "color": "white"}),
-            style={
-                "background": "linear-gradient(to right, #15868e, #F0FFFF)",
-                "border": "none",
-            },
-        ),
-        dbc.CardBody(
-            [
-                html.H6("ALERTAS DE INUNDACIONES EN ZONAS EDUCATIVAS", style={"color": "#15868e"}),
-            ],
-            style={"font-size": "20px", "background-color": "#ffffff", "color": "#333"},
-        ),
+
+area1 = dbc.Stack(
+    children=[
+        html.H1("COLEGIOS Y CRECIDAS", className="font-weight-bold"),
+        html.H4("Alertas de Inundaciones en Zonas Educativas", className= "font-weight-bold")
     ],
-    style={"border": "2px solid #15868e", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"},
+    direction="column",
+    className="align-items-center flex-wrap py-4 mb-4 text-white",
+    style={"background-color": "#64B5F6"}
+    
 )
