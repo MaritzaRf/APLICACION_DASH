@@ -12,6 +12,9 @@ from frontend.area3 import area3, render_news_tab, render_empresa_tab, render_co
 # Crea la aplicación Dash
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+server = app.server
+
+
 @app.callback(
     Output("mapa", "figure"),
     Input("departamento_consultado", "value")
