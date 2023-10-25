@@ -1,0 +1,26 @@
+dash == 2.6.0
+
+pandas
+
+gunicorn
+
+plotly
+
+dash_bootstrap_components
+
+matplotlib
+
+scipy
+
+geopandas
+
+folium
+
+dash.dependencies 
+
+backend.calculoInundacion
+
+consultarDepartamento
+
+
+
