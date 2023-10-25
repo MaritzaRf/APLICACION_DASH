@@ -16,11 +16,5 @@ geopandas
 
 folium
 
-dash.dependencies 
-
-backend.calculoInundacion
-
-consultarDepartamento
-
 
 
