@@ -9,9 +9,9 @@ departamentos_ordenados = sorted([depto for depto in departamentos['DeNombre'].u
                                   and depto != 'San Andrés Providencia y Santa Catalina'])
 opciones_dropdown = [{'label': depto, 'value': depto} for depto in departamentos_ordenados]
 
-rios = gpd.read_file('data/DrenajeDoble.zip')
+rios = gpd.read_file('DrenajeDoble.zip')
 
-colegios = gpd.read_file('data/EstablecimientosEducativos.zip')
+colegios = gpd.read_file('EstablecimientosEducativos.zip')
 
 def color_por_departamento(departamento):
     hash_object = hashlib.md5(departamento.encode())
