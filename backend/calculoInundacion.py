@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import hashlib 
 
 # Importamos los archivos de datos
-departamentos = gpd.read_file('data/Departamentos.zip') 
+departamentos = gpd.read_file('Departamentos.zip') 
 departamentos_ordenados = sorted([depto for depto in departamentos['DeNombre'].unique() if depto != "Area en Litigio Cauca - Huila" 
                                   and depto != 'San Andrés Providencia y Santa Catalina'])
 opciones_dropdown = [{'label': depto, 'value': depto} for depto in departamentos_ordenados]
