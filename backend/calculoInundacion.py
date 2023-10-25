@@ -9,7 +9,7 @@ departamentos_ordenados = sorted([depto for depto in departamentos['DeNombre'].u
                                   and depto != 'San Andrés Providencia y Santa Catalina'])
 opciones_dropdown = [{'label': depto, 'value': depto} for depto in departamentos_ordenados]
 
-rios = gpd.read_file('https://drive.google.com/drive/u/0/folders/17RYHlVCZfWSlxVFGHR_Fz5Zhc-uHPKdj')
+rios = gpd.read_file('DobleDrenaje.zip')
 
 colegios = gpd.read_file('EstablecimientosEducativos.zip')
 
